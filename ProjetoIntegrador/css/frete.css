@@ -1,0 +1,63 @@
+.divsAdress{
+    border-width: 1px;
+    border-color: red;
+}
+
+.divsBorders{
+    margin-top: 1vh;
+    margin-bottom: 2vh;
+    border-radius: 1vh;
+    border: black 3px solid;
+    font-size: 1.1rem;
+}
+
+#fotoLogo{
+    margin: 10px auto;
+    width: 20vw;
+    height: 20vw;
+    border: black 10px solid;
+    border-radius: 10vw;
+    background-image: url("https://s2.glbimg.com/h3Duok3KWVA8yaIOzZZIESkNLC4DKPsVVGWWhNMHhpNIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/08/02/imagem_para_sexta_51.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.estrelas{
+    margin: 5px auto;
+    background-color: black;
+    opacity: 60%;
+    height: 8vh;
+    width: 15vw;
+    border-radius: 100px;
+    display: flex;
+    padding-top: 1.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa{
+    font-size: 5vh;
+}
+
+.estrelas label i.fa:before {
+    content: '\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+}
+
+#nameLogo{
+    background-color: gray;
+    opacity: 70%;
+    color: black;
+    border-radius: 20px;
+    padding: 1vh;
+    text-align: center;
+}

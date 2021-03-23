@@ -1,0 +1,126 @@
+*:focus {
+  outline: none;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  background: transparent;
+  width: 0px;
+}
+
+#page {
+  overflow-x: hidden;
+}
+
+#page.toggled #sidebar {
+  margin-left: -15rem;
+}
+
+#sidebar {
+  min-height: 100vh;
+  margin-left: 0;
+  width: 15rem;
+  background-color: #4d0000;
+  -webkit-transition: margin 0.25s ease-out;
+  transition: margin 0.25s ease-out;
+}
+
+#sidebar header {
+  padding: 0.875rem 1.25rem;
+  font-size: 1.2rem;
+}
+
+#page-content {
+  min-width: 0;
+  width: 100%;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.btn {
+  background-color: #343a40;
+  border: black 0px solid;
+  color: #dddddd;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.btn:focus {
+  background-color: #343a40;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn:hover {
+  background-color: #303030;
+  color: white;
+  -webkit-box-shadow: black -0.5px 1px 10px;
+          box-shadow: black -0.5px 1px 10px;
+}
+
+nav {
+  background-color: #4d0000;
+  color: black;
+}
+
+header {
+  color: white;
+}
+
+input {
+  border-radius: 7px;
+  border: 0.5px black solid;
+}
+
+textarea:focus, input:focus {
+  outline: none;
+}
+
+#lateral .list-group-item:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+  -webkit-box-shadow: black -3.5px 1px 10px;
+          box-shadow: black -3.5px 1px 10px;
+}
+
+header:hover {
+  cursor: pointer;
+  -webkit-box-shadow: black -3.5px 1px 10px;
+          box-shadow: black -3.5px 1px 10px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.navbar-nav li:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  color: white;
+  -webkit-box-shadow: black 0px 1px 5px;
+          box-shadow: black 0px 1px 5px;
+  border-radius: 5px;
+}
+
+.dropdown-item {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.dropdown-item:hover {
+  color: white;
+  -webkit-box-shadow: black 0px 1px 5px;
+          box-shadow: black 0px 1px 5px;
+  cursor: pointer;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+/*# sourceMappingURL=index.css.map */

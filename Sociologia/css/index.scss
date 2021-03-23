@@ -1,0 +1,110 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+button{
+  border: 1px black solid;
+  position: fixed;
+  right: 5px;
+  width: 10%;
+  height: 6%;
+  border-radius: 15px;
+}
+
+html, body{
+  font-family: 'Libre Baskerville', serif;
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background: linear-gradient(to bottom, #676767,#222222);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-weight: 300;
+}
+
+h1{
+  color:#ffffff;
+  display: block;
+  text-align: center;
+  margin: 3% auto;
+  padding: 0px 2%;
+  font-size: clamp(1.5rem, 3vw, 8rem);
+}
+
+main{
+  box-shadow: 0px 0px 5px 0px rgba($color: #fff, $alpha: .5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
+  grid-gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  border-radius: 60px;
+  margin: 5%;
+  padding: 5%;
+  background-color: black;
+
+  p{
+    margin-top: 5%;
+    transition: .3s;
+    color: black;
+  }
+
+  img{
+    max-width: 50%;
+  }
+
+  .title{
+    margin-bottom: 20px;
+    font-size: clamp(1.3rem, 2vw, 2rem);
+  }
+
+  .content{
+    margin: 7% 1%;
+  }
+
+  .content:hover{
+    p{
+      color: white;
+      word-wrap: break-word;
+      word-break: break-all;
+    }
+  }
+}
+
+section{
+  margin: 0px 5%;
+  padding: 3%;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+
+  #texto{
+    margin: 3% 0px;
+    padding: 0px 2%;
+    font-size: clamp(.7rem, 2vw, 3rem);
+  }
+
+  img{
+    width: 20%;
+    max-width: 100px;
+  }
+
+  h2{
+    text-align: center;
+    font-size: clamp(1rem, 3vw, 2rem);
+  }
+
+  .fonte{
+    font-size: clamp(.25rem, .75vw, .5rem);
+  }
+
+  .margemErro{
+    font-size: clamp(.5rem, 1.5vw, 1rem);
+  }
+}

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+
+    <style>
+      *:focus {
+        outline: none;
+      }
+
+      * {
+        padding: 0px;
+        margin: 0px;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+      }
+
+      ::-webkit-scrollbar {
+        background: transparent;
+        width: 0px;
+      }
+
+      #page {
+        overflow-x: hidden;
+      }
+
+      #page.toggled #sidebar {
+        margin-left: -15rem;
+      }
+
+      #sidebar {
+        min-height: 100vh;
+        margin-left: 0;
+        width: 15rem;
+        background-color: #4d0000;
+        -webkit-transition: margin 0.25s ease-out;
+        transition: margin 0.25s ease-out;
+      }
+
+      #sidebar header {
+        padding: 0.875rem 1.25rem;
+        font-size: 1.2rem;
+      }
+
+      #page-content {
+        min-width: 0;
+        width: 100%;
+      }
+
+      body {
+        font-family: 'Times New Roman', Times, serif;
+      }
+
+      .btn {
+        background-color: #343a40;
+        border: black 0px solid;
+        color: #dddddd;
+        -webkit-transition: 0.4s;
+        transition: 0.4s;
+      }
+
+      .btn:focus {
+        background-color: #343a40;
+        outline: none;
+        -webkit-box-shadow: none;
+                box-shadow: none;
+      }
+
+      .btn:hover {
+        background-color: #303030;
+        color: white;
+        -webkit-box-shadow: black -0.5px 1px 10px;
+                box-shadow: black -0.5px 1px 10px;
+      }
+
+      nav {
+        background-color: #4d0000;
+        color: black;
+      }
+
+      header {
+        color: white;
+      }
+
+      input {
+        border-radius: 7px;
+        border: 0.5px black solid;
+      }
+
+      textarea:focus, input:focus {
+        outline: none;
+      }
+
+      #lateral .list-group-item:hover {
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        color: white;
+        -webkit-box-shadow: black -3.5px 1px 10px;
+                box-shadow: black -3.5px 1px 10px;
+      }
+
+      header:hover {
+        cursor: pointer;
+        -webkit-box-shadow: black -3.5px 1px 10px;
+                box-shadow: black -3.5px 1px 10px;
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .navbar-nav li:hover {
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+        color: white;
+        -webkit-box-shadow: black 0px 1px 5px;
+                box-shadow: black 0px 1px 5px;
+        border-radius: 5px;
+      }
+
+      .dropdown-item {
+        -webkit-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .dropdown-item:hover {
+        color: white;
+        -webkit-box-shadow: black 0px 1px 5px;
+                box-shadow: black 0px 1px 5px;
+        cursor: pointer;
+        margin-right: 10px;
+        margin-left: 10px;
+      }
+
+      .input{
+        display: block;
+        width: 100%;
+        height: calc(1.5em + .75rem + 2px);
+        padding: .375rem .75rem;
+        font-size: 1rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: #495057;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+      }
+
+      .card {
+      color: white;
+      }
+    </style>
+
+    <title>Lista de tarefas</title>
+  </head>
+  <body style="background-color:#4d0000;">
+    <div id="page" class="d-flex" >
+      <div id="sidebar" class="border-right" style="background-color: #4d0000; text-decoration-line: none; color: white;">
+        <header class="mb-2 mt-1">My TodoList</header>
+        <nav class="list-group list-group-flush" id="lateral">
+          <a
+            href="index.html"
+            class="list-group-item list-group-item-action" style="background-color: #4d0000; text-decoration-line: none; color: white; border: none;"
+            >Dashboard</a
+          >
+          <a href="./profile.html" class="list-group-item list-group-item-action"  style="background-color: #4d0000; text-decoration-line: none; color: white; border: none;"
+            >Perfil</a
+          >
+          <a
+            href="#"
+            onclick="logout()"
+            class="list-group-item list-group-item-action"  style="background-color: #4d0000; text-decoration-line: none; color: white; border: none;"
+            >Sair</a
+          >
+        </nav>
+      </div>
+      <div id="page-content">
+        <nav
+          class="navbar navbar-expand-lg navbar-dark border-bottom"
+        >
+          <button id="sidebar-toggle" class="btn">Menu</button>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            style="outline: none; border: 1px solid lightgray"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div id="navbarSupportedContent" class="collapse navbar-collapse">
+            <ul class="navbar-nav ml-auto mt-2">
+              <li class="nav-item active">
+                <a href="index.html" class="nav-link" style="color: white;">Home</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  id="navbarDropdown"
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-toggle="dropdown"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  style="color: white; border: none;"
+                  >Meu Usuário</a
+                >
+                <div
+                  class="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="navbarDropdown"
+                  style="color: white; background-color: #4d0000; border: none;">
+
+                  <a href="./profile.html" class="dropdown-item mb-3" style="color: white; background-color: #4d0000;">Perfil</a>
+                  <a href="#" class="dropdown-item" style="color: white; background-color: #4d0000;" onclick="logout()">Sair</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </nav>
+
+        <div class="container-fluid text-center">
+          <div class="card" style="background-color: #4d0000;">
+            <div class="card-body">
+              <h1 class="card-title mt-4">Meu Perfil</h1>
+              <h5 id="userInfo" class="card-subtitle mb-5">Perfil</h5>
+              <form>
+                <div class="form-group">
+                  <label for="inputFirstName">Nome</label>
+                  <input type="text" id="inputFirstName" class="input">
+                </div>
+                <div class="form-group">
+                  <label for="inputLastName">Sobrenome</label>
+                  <input type="text" id="inputLastName" class="input">
+                </div>
+                <button class="btn" type="button" onclick="saveProfile()">Salvar Perfil</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+    <script src="./js/init.js"></script>
+    <script src="./js/auth.js"></script>
+    <script src="./js/profile.js"></script>
+    <script>
+      $("#sidebar-toggle").click(function (e) {
+        e.preventDefault()
+        $("#page").toggleClass("toggled")
+      })
+    </script>
+  </body>
+</html>

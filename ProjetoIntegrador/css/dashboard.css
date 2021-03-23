@@ -1,0 +1,143 @@
+#fotoCapa{
+    width: 100%;
+    height: 35vh;
+    border-bottom: black solid 3px;
+    padding-top: 1vh;
+    background-image: url("https://conteudo.imguol.com.br/c/noticias/f1/2019/11/02/a-nasa-elegeu-como-foto-astronomica-do-dia-em-22-de-outubro-esta-imagem-da-via-lactea-capturada-por-jheison-huerta-no-salar-de-uyuni-na-bolivia-1572723035380_v2_976x549.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#fotoCapa h2{
+    background-color: white;
+    opacity: 50%;
+    color: black;
+    border-radius: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    padding: 1vh;
+    text-align: center;
+}
+
+
+#fotoLogo{
+    position: absolute;
+    top: 15vh;
+    right: 30vw;
+    width: 20vw;
+    height: 20vw;
+    border: black 10px solid;
+    border-radius: 10vw;
+    background-image: url("https://s2.glbimg.com/h3Duok3KWVA8yaIOzZZIESkNLC4DKPsVVGWWhNMHhpNIoz-HdGixxa_8qOZvMp3w/e.glbimg.com/og/ed/f/original/2013/08/02/imagem_para_sexta_51.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#edite{
+    background-color: whitesmoke;
+    opacity: 0%;    
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    background-image: url("../img/icon/camera.png");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+#edite:hover{
+    opacity: 40%;
+}
+
+
+#editeCapa{
+    background-color: whitesmoke;
+    opacity: 40%;
+    width: 10vh;
+    height: 10vh;
+    position: absolute;
+    top: 25vh;
+    right: 0px;
+    border-top-left-radius: 10%;
+    background-image: url("../img/icon/camera.png");
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.estrelas{
+    position: absolute;
+    top: 26vh;
+    left: 1vw;
+    background-color: black;
+    opacity: 60%;
+    height: 8vh;
+    width: 15vw;
+    border-radius: 100px;
+    display: flex;
+    padding-top: 1.5vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa{
+    font-size: 5vh;
+}
+
+.estrelas label i.fa:before {
+    content: '\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+}
+
+#direita{
+    text-align: right;
+}
+
+#esquerda{
+    text-align: left;
+}
+
+.divsAdress{
+    border-width: 1px;
+    border-color: red;
+}
+
+.divsBorders{
+    margin-top: 1vh;
+    border-radius: 1vh;
+    border: black 3px solid;
+    font-size: 1.1rem;
+}
+
+.lista li{
+    background: linear-gradient(#ffffff, #aabbcc);
+    display: flex;
+    justify-content: space-between;
+    height: 10vw;
+    width: 100%;
+}
+
+.lista li button{
+    background: linear-gradient(#ffffff, #aabbcc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8vw;
+    height: 8vw;
+    border-radius: 4vw;
+    font-size: 5vw;
+    font-weight: 100;
+}

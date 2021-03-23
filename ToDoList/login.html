@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="/css/login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="https://unpkg.com/sweetalert2@9/dist/sweetalert2.all.js"></script>
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      overflow: overlay;
+    }
+
+    ::-webkit-scrollbar {
+      background: transparent;
+      width: 0px;
+    }
+
+    img {
+      max-width: 80%;
+      max-height: 80%;
+      -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+    }
+
+    .btn {
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      background-color: #4d0000;
+      border: black 0px solid;
+      color: #dddddd;
+      -webkit-transition: 0.4s;
+      transition: 0.4s;
+    }
+
+    .btn:hover {
+      color: white;
+      -webkit-box-shadow: black -0.5px 1px 5px;
+      box-shadow: black -0.5px 1px 5px;
+    }
+
+    .btn:focus {
+      color: white;
+      -webkit-box-shadow: black -0.5px 1px 10px;
+      box-shadow: black -0.5px 1px 10px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      height: calc(1.5em + .75rem + 2px);
+      padding: .375rem .75rem;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #495057;
+      background-color: #fff;
+      background-clip: padding-box;
+      border: 1px solid #ced4da;
+      border-radius: .25rem;
+    }
+
+    textarea:focus,
+    input:focus {
+      outline: none;
+    }
+  </style>
+
+  <title>Página de Autenticação</title>
+</head>
+
+<body style="background-color: #2a2a2a;">
+  <div class="container-fluid">
+    <div class="row text-white">
+      <div class="col-10 offset-1 text-center mt-5 pb-4">
+        <h1 class="h1">
+          Autenticação
+        </h1>
+      </div>
+
+      <div class="col-md-10 bg-dark mb-5"
+        style="border: 1px solid #4d0000; box-shadow: #200000 5px 0.1px 10px, #100000 9px 0.2px 30px; width: 80%; margin: auto;">
+        <div class="row">
+          <div id="loginLogo" class="col-md-6 p-4 d-flex justify-content-center" style="background-color: #4d0000;">
+            <img src="/img/firebase_logo.png" alt="Logo Firebase" style="max-width: 65%;">
+          </div>
+          <div class="col-md-6 p-5">
+            <div id="loginForm">
+              <h2 class="h2 text-center text-white mb-3">Acesso</h2>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" />
+              </div>
+              <div class="form-group">
+                <label for="password">Senha</label>
+                <input type="password" name="password" id="password" />
+              </div>
+              <button type="button" class="btn" onclick="login()">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.19.1/firebase-firestore.js"></script>
+
+  <script src="/js/init.js"></script>
+  <script src="/js/auth.js"></script>
+</body>
+
+</html>

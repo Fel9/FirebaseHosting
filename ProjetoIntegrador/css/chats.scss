@@ -1,0 +1,63 @@
+#chat div{
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.areaInformaçoes{
+  list-style: none;
+}
+
+.esquerda{
+  background-color: #555555;
+  width: fit-content;
+  margin: auto 0;
+  margin-right: auto;
+  color: white;
+}
+
+.direita{
+  background-color: #777;
+  color: white;
+  width: fit-content;
+  margin: auto 0;
+  margin-left: auto;
+}
+
+.zona-textual{
+  display:flex;
+  align-items: center;
+  flex-direction:row;
+  padding: 2px;
+}
+
+.mensagem:focus{
+  outline: none;
+}
+
+.mensagem{
+  border: none;
+  padding: 5px;
+  flex-grow: 2;
+  border-radius: 10px;
+}
+
+.botao{
+  border: none;
+}
+
+.botao:focus{
+  outline: none;
+  background-color: white;
+}
+
+.botao:hover{
+  outline: none;
+  background-color: white;
+}
+
+.lateral{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+}

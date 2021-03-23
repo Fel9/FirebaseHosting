@@ -1,0 +1,21 @@
+#chart_div {
+  width: clamp(400px, 97vw, 1000px);
+}
+
+#chart_div text {
+  fill: #ddd;
+}
+
+.segura {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+/*# sourceMappingURL=index.css.map */
