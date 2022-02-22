@@ -75,8 +75,8 @@ body {
 main {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (14rem)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 14rem);
+  -ms-grid-columns: (minmax(10rem, 15rem))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -86,6 +86,7 @@ main {
   gap: 1rem;
   text-align: center;
   padding: 10px;
+  word-wrap: break-word;
 }
 
 main img {
@@ -94,11 +95,11 @@ main img {
 
 main .title {
   margin-bottom: 20px;
-  font-size: clamp(1.1rem, 2vw, 2rem);
+  font-size: clamp(1.5rem, 1.7vw, 2rem);
 }
 
 main .content {
-  padding: 20px 0;
+  padding: 20px;
   text-decoration: none;
   color: white;
   border-radius: 1rem;
@@ -119,18 +120,18 @@ main .spoiler {
   transition: 0.3s;
   font-size: clamp(1rem, 1vw, 2rem);
   color: #222;
+  word-wrap: normal;
 }
 
 main .content:hover .spoiler {
   color: white;
-  word-wrap: break-word;
-  word-break: break-all;
 }
 
 .result {
   border-radius: 10px;
   color: white;
   text-align: center;
+  padding: 0 20px;
 }
 
 .result #texto {
@@ -147,7 +148,7 @@ main .content:hover .spoiler {
 .result h3 {
   margin: 0 auto;
   font-weight: 300;
-  font-size: clamp(1rem, 3vw, 2.5rem);
+  font-size: clamp(1.5rem, 2vw, 2.5rem);
 }
 
 .result .fonte {

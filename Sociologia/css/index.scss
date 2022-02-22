@@ -61,12 +61,13 @@ body {
 }
 main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 14rem);
+  grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
   justify-content: center;
   align-items: center;
   gap: 1rem;
   text-align: center;
   padding: 10px;
+  word-wrap: break-word;
 
   img {
     max-width: 150px;
@@ -74,11 +75,11 @@ main {
 
   .title {
     margin-bottom: 20px;
-    font-size: clamp(1.1rem, 2vw, 2rem);
+    font-size: clamp(1.5rem, 1.7vw, 2rem);
   }
 
   .content {
-    padding: 20px 0;
+    padding: 20px;
     text-decoration: none;
     color: white;
     border-radius: 1rem;
@@ -95,13 +96,12 @@ main {
     transition: 0.3s;
     font-size: clamp(1rem, 1vw, 2rem);
     color: $bg-color;
+    word-wrap: normal;
   }
 
   .content:hover {
     .spoiler {
       color: white;
-      word-wrap: break-word;
-      word-break: break-all;
     }
   }
 }
@@ -110,6 +110,7 @@ main {
   border-radius: 10px;
   color: white;
   text-align: center;
+  padding: 0 20px;
 
   #texto {
     margin: 3% 0px;
@@ -125,7 +126,7 @@ main {
   h3 {
     margin: 0 auto;
     font-weight: 300;
-    font-size: clamp(1rem, 3vw, 2.5rem);
+    font-size: clamp(1.5rem, 2vw, 2.5rem);
   }
 
   .fonte {
