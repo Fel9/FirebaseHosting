@@ -2,135 +2,117 @@
 <html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/index.css">
-  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/index.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet" />
   <title>Eis a chance de nascer com...</title>
 </head>
 
 <body>
+  <!-- <button onclick="modoNoturno()">Modo noturno</button> -->
 
-  <button onclick="modoNoturno()">Modo noturno</button>
-
-  <h1 style="font-weight: 400;">Eis a chance de nascer com...</h1>
+  <header>
+    <h1 class="header">
+      <span id="text">
+        Eis a chance de nascer com...
+        <span id="animation">
+          |
+        </span>
+      </span>
+    </h1>
+  </header>
 
   <main>
-    <div class="content" onclick="f(0.27)">
-      <div class="title">
-        Cegueira
-      </div>
-      <img src="/img/cego.png" alt="Ícone de Cegueira">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" onclick="f(0.27)" href="#fundo">
+      <div class="title">Cegueira</div>
+      <img src="/img/cego.png" alt="Ícone de Cegueira" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(1)">
-      <div class="title">
-        Deuteranomalia
-      </div>
-      <img src="/img/d1.png" alt="Ícone de Deuteranomalia">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(1)">
+      <div class="title">Deuteranomalia</div>
+      <img src="/img/d1.png" alt="Ícone de Deuteranomalia" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(1.5)">
-      <div class="title">
-        Protanopia
-      </div>
-      <img src="/img/d2.png" alt="Ícone de Protanopia">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(1.5)">
+      <div class="title">Protanopia</div>
+      <img src="/img/d2.png" alt="Ícone de Protanopia" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(0.008)">
-      <div class="title">
-        Tritanopia
-      </div>
-      <img src="/img/d3.png" alt="Ícone de Tritanopia">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(0.008)">
+      <div class="title">Tritanopia</div>
+      <img src="/img/d3.png" alt="Ícone de Tritanopia" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(0.001)">
-      <div class="title">
-        Monocromacia
-      </div>
-      <img src="/img/d4.png" alt="Ícone de Tritanopia">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(0.001)">
+      <div class="title">Monocromacia</div>
+      <img src="/img/d4.png" alt="Ícone de Tritanopia" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(0.18)">
-      <div class="title">
-        Surdez
-      </div>
-      <img src="/img/surdo.png" alt="Ícone de Surdez">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(0.18)">
+      <div class="title">Surdez</div>
+      <img src="/img/surdo.png" alt="Ícone de Surdez" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(0.94)">
-      <div class="title">
-        Dificiência Auditiva
-      </div>
-      <img src="/img/umbocadosurdo.png" alt="Ícone de Dificiência auditiva">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(0.94)">
+      <div class="title">Dificiência Auditiva</div>
+      <img src="/img/umbocadosurdo.png" alt="Ícone de Dificiência auditiva" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(3.97)">
-      <div class="title">
-        Audição Debilitada
-      </div>
-      <img src="/img/umticosurdo.png" alt="Ícone de Audição ruim">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(3.97)">
+      <div class="title">Audição Debilitada</div>
+      <img src="/img/umticosurdo.png" alt="Ícone de Audição ruim" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(0.39)">
-      <div class="title">
-        Deficiência Motora Total
-      </div>
-      <img src="/img/cadeirante.png" alt="Ícone de Cadeirante">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(0.39)">
+      <div class="title">Deficiência Motora Total</div>
+      <img src="/img/cadeirante.png" alt="Ícone de Cadeirante" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(1.94)">
-      <div class="title">
-        Deficiência Motora Parcial
-      </div>
-      <img src="/img/muleta.png" alt="Ícone de Deficiente motor">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(1.94)">
+      <div class="title">Deficiência Motora Parcial</div>
+      <img src="/img/muleta.png" alt="Ícone de Deficiente motor parcial" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(4.63)">
-      <div class="title">
-        Condição Motora Debilitada
-      </div>
-      <img src="/img/muleta.png" alt="Ícone de Deficiente motor">
-      <p>Resposta ao fim da página</p>
-    </div>
+    <a class="content" href="#fundo" onclick="f(4.63)">
+      <div class="title">Condição Motora Debilitada</div>
+      <img src="/img/muleta.png" alt="Ícone de Deficiente motor debilidato" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
 
-    <div class="content" onclick="f(1.1)">
-      <div class="title">
-        Deficiente Intelectual
-      </div>
-      <img src="/img/deficientemental.png" alt="Ícone de Deficiente Intelectual">
-      <p>Resposta ao fim da página</p>
-    </div>
-
+    <a class="content" href="#fundo" onclick="f(1.1)">
+      <div class="title">Deficiente Intelectual</div>
+      <img src="/img/deficientemental.png" alt="Ícone de Deficiente Intelectual" />
+      <p class="spoiler">Resposta ao fim da página</p>
+    </a>
   </main>
 
-  <section>
+  <section class="result">
     <div class="conteudo">
-      <h2>A chance equivale às seguintes moedas caírem todas em Cara:</h2>
-      <div class="margemErro" id="margemErro">
-      </div>
-      <div id="texto" class="fonte">
-      </div>
-      <div id="div">
-      </div>
+      <h3>A chance equivale às seguintes moedas caírem todas em Cara:</h4>
+        <div id="texto" class="fonte">
+        </div>
+        <div id="moedas">
+        </div>
     </div>
   </section>
+
+  <div id="fundo"></div>
 
   <!-- The core Firebase JS SDK is always required and must be listed first -->
   <script src="https://www.gstatic.com/firebasejs/7.20.0/firebase-app.js"></script>
   <script src="../js/init.js"></script>
   <script src="../js/index.js"></script>
-
 </body>
 
 </html>

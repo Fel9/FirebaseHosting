@@ -14,106 +14,147 @@ button {
   border-radius: 15px;
 }
 
-html, body {
-  font-family: 'Libre Baskerville', serif;
-  height: 100%;
-  width: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#676767), to(#222222));
-  background: linear-gradient(to bottom, #676767, #222222);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-weight: 300;
+  background: #222;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-h1 {
-  color: #ffffff;
-  display: block;
+.header {
   text-align: center;
-  margin: 3% auto;
-  padding: 0px 2%;
-  font-size: clamp(1.5rem, 3vw, 8rem);
+  padding: 50px 0;
+  color: white;
+  font-weight: 300;
+  font-size: clamp(1.7rem, 3vw, 8rem);
+}
+
+.header #text {
+  position: relative;
+}
+
+.header #animation {
+  font-size: clamp(1.7rem, 3vw, 8rem);
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  background-color: #222;
+  text-align: left;
+  -webkit-animation: progresive-underline 2.5s forwards ease-out;
+          animation: progresive-underline 2.5s forwards ease-out;
+}
+
+@-webkit-keyframes progresive-underline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+  100% {
+    color: #222;
+  }
+}
+
+@keyframes progresive-underline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+  100% {
+    color: #222;
+  }
 }
 
 main {
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
-          box-shadow: 0px 0px 5px 0px rgba(255, 255, 255, 0.5);
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(10rem, 15rem))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
-  grid-gap: 2rem;
+  -ms-grid-columns: (14rem)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 14rem);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  color: white;
+  gap: 1rem;
   text-align: center;
-  border-radius: 60px;
-  margin: 5%;
-  padding: 5%;
-  background-color: black;
-}
-
-main p {
-  margin-top: 5%;
-  -webkit-transition: .3s;
-  transition: .3s;
-  color: black;
+  padding: 10px;
 }
 
 main img {
-  max-width: 50%;
+  max-width: 150px;
 }
 
 main .title {
   margin-bottom: 20px;
-  font-size: clamp(1.3rem, 2vw, 2rem);
+  font-size: clamp(1.1rem, 2vw, 2rem);
 }
 
 main .content {
-  margin: 7% 1%;
+  padding: 20px 0;
+  text-decoration: none;
+  color: white;
+  border-radius: 1rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
 }
 
-main .content:hover p {
+main .content:hover {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+  -webkit-box-shadow: 2px 2px 10px 1px #444;
+          box-shadow: 2px 2px 10px 1px #444;
+}
+
+main .spoiler {
+  margin-top: 20px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  font-size: clamp(1rem, 1vw, 2rem);
+  color: #222;
+}
+
+main .content:hover .spoiler {
   color: white;
   word-wrap: break-word;
   word-break: break-all;
 }
 
-section {
-  margin: 0px 5%;
-  padding: 3%;
+.result {
   border-radius: 10px;
-  background-color: white;
-  color: black;
+  color: white;
+  text-align: center;
 }
 
-section #texto {
+.result #texto {
   margin: 3% 0px;
   padding: 0px 2%;
   font-size: clamp(0.7rem, 2vw, 3rem);
 }
 
-section img {
-  width: 20%;
+.result .moeda {
+  width: 10%;
   max-width: 100px;
 }
 
-section h2 {
-  text-align: center;
-  font-size: clamp(1rem, 3vw, 2rem);
+.result h3 {
+  margin: 0 auto;
+  font-weight: 300;
+  font-size: clamp(1rem, 3vw, 2.5rem);
 }
 
-section .fonte {
+.result .fonte {
   font-size: clamp(0.25rem, 0.75vw, 0.5rem);
 }
 
-section .margemErro {
+.result .margemErro {
   font-size: clamp(0.5rem, 1.5vw, 1rem);
 }
 /*# sourceMappingURL=index.css.map */

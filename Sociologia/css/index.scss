@@ -1,10 +1,12 @@
-*{
+$bg-color: #222;
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-button{
+button {
   border: 1px black solid;
   position: fixed;
   right: 5px;
@@ -13,63 +15,90 @@ button{
   border-radius: 15px;
 }
 
-html, body{
-  font-family: 'Libre Baskerville', serif;
-  height: 100%;
-  width: 100%;
+html {
+  scroll-behavior: smooth;
 }
 
-body{
-  background: linear-gradient(to bottom, #676767,#222222);
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-weight: 300;
+body {
+  background: $bg-color;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-h1{
-  color:#ffffff;
-  display: block;
+.header {
   text-align: center;
-  margin: 3% auto;
-  padding: 0px 2%;
-  font-size: clamp(1.5rem, 3vw, 8rem);
+  padding: 50px 0;
+  color: white;
+  font-weight: 300;
+  font-size: clamp(1.7rem, 3vw, 8rem);
+
+  #text {
+    position: relative;
+  }
+  #animation {
+    font-size: clamp(1.7rem, 3vw, 8rem);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 100%;
+    background-color: $bg-color;
+    text-align: left;
+
+    animation: progresive-underline 2.5s forwards ease-out;
+  }
 }
 
-main{
-  box-shadow: 0px 0px 5px 0px rgba($color: #fff, $alpha: .5);
+@keyframes progresive-underline {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+  100% {
+    color: $bg-color;
+  }
+}
+main {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(10rem, 15rem));
-  grid-gap: 2rem;
+  grid-template-columns: repeat(auto-fit, 14rem);
   justify-content: center;
   align-items: center;
-  color: white;
+  gap: 1rem;
   text-align: center;
-  border-radius: 60px;
-  margin: 5%;
-  padding: 5%;
-  background-color: black;
+  padding: 10px;
 
-  p{
-    margin-top: 5%;
-    transition: .3s;
-    color: black;
+  img {
+    max-width: 150px;
   }
 
-  img{
-    max-width: 50%;
-  }
-
-  .title{
+  .title {
     margin-bottom: 20px;
-    font-size: clamp(1.3rem, 2vw, 2rem);
+    font-size: clamp(1.1rem, 2vw, 2rem);
   }
 
-  .content{
-    margin: 7% 1%;
+  .content {
+    padding: 20px 0;
+    text-decoration: none;
+    color: white;
+    border-radius: 1rem;
+    transition: 0.2s;
+
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 2px 2px 10px 1px #444;
+    }
   }
 
-  .content:hover{
-    p{
+  .spoiler {
+    margin-top: 20px;
+    transition: 0.3s;
+    font-size: clamp(1rem, 1vw, 2rem);
+    color: $bg-color;
+  }
+
+  .content:hover {
+    .spoiler {
       color: white;
       word-wrap: break-word;
       word-break: break-all;
@@ -77,34 +106,33 @@ main{
   }
 }
 
-section{
-  margin: 0px 5%;
-  padding: 3%;
+.result {
   border-radius: 10px;
-  background-color: white;
-  color: black;
+  color: white;
+  text-align: center;
 
-  #texto{
+  #texto {
     margin: 3% 0px;
     padding: 0px 2%;
-    font-size: clamp(.7rem, 2vw, 3rem);
+    font-size: clamp(0.7rem, 2vw, 3rem);
   }
 
-  img{
-    width: 20%;
+  .moeda {
+    width: 10%;
     max-width: 100px;
   }
 
-  h2{
-    text-align: center;
-    font-size: clamp(1rem, 3vw, 2rem);
+  h3 {
+    margin: 0 auto;
+    font-weight: 300;
+    font-size: clamp(1rem, 3vw, 2.5rem);
   }
 
-  .fonte{
-    font-size: clamp(.25rem, .75vw, .5rem);
+  .fonte {
+    font-size: clamp(0.25rem, 0.75vw, 0.5rem);
   }
 
-  .margemErro{
-    font-size: clamp(.5rem, 1.5vw, 1rem);
+  .margemErro {
+    font-size: clamp(0.5rem, 1.5vw, 1rem);
   }
 }
